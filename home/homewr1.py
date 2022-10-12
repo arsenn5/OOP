@@ -12,7 +12,7 @@ class Hero:
         print(self.damage * 2)
 
     def Greetins(self, gritins):
-        print(f'my name is', self.name)
+        print('my name is', self.name)
 
     def Brand_phrase(self, br):
         print(f'good will win')
@@ -23,19 +23,13 @@ DeadPool = Hero('Whaet', 'RIP', +9999, 78)
 Blaed = Hero('Piter', 'Vampir', 230, 90)
 
 print(H.name, H.damage, H.nickname, H.hp)
-
-print(Blaed.name, Blaed.damage, Blaed.nickname, Blaed.hp)
-
-print(DeadPool.name, DeadPool.damage, DeadPool.nickname, DeadPool.hp)
-
-print(BlackAdam.name, BlackAdam.damage, BlackAdam.nickname, BlackAdam.hp)
-
-
 H.Brand_phrase(Hero)
 
-BlackAdam.Damage2(Hero)
-
-DeadPool.Heal(Hero)
-
+print(Blaed.name, Blaed.damage, Blaed.nickname, Blaed.hp)
 Blaed.Greetins(Hero)
 
+print(DeadPool.name, DeadPool.damage, DeadPool.nickname, DeadPool.hp)
+DeadPool.Heal(Hero)
+
+print(BlackAdam.name, BlackAdam.damage, BlackAdam.nickname, BlackAdam.hp)
+BlackAdam.Damage2(Hero)
