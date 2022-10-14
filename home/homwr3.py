@@ -1,38 +1,47 @@
-class Col:
-    nomber1 = int(input('Введите число1 '))
-    namber2 = int(input('Введите число2 '))
-    def __init__(self, sun1=nomber1, sun2=namber2):
-        self.sun1 = sun1
-        self.sun2 = sun2
+class Add:
+    def __init__(self, val):
+        self.val = val
+
+    def __add__(self, other):
+        return self.val + other.val
 
 
-class Add(Col):
-    def __add__(self):
-        return self.sun1 + self.sun2
+class Sub:
+    def __init__(self, val):
+        self.val = val
+
+    def __sub__(self, other):
+        return self.val - other.val
 
 
-class Sub(Col):
-    def __sub__(self):
-        return self.sun1 - self.sun2
+class Mul:
+    def __init__(self, val):
+        self.val = val
+
+    def __mul__(self, other):
+        return self.val * other.val
 
 
-class Mul(Col):
-    def __mul__(self):
-        return self.sun1 * self.sun2
+class Truediv:
+    def __init__(self, val):
+        self.val = val
+
+    def __truediv__(self, other):
+        return self.val / other.val
 
 
-class Truediv(Col):
-    def __truediv__(self):
-        return self.sun1 / self.sun2
+class Col(Add, Sub, Mul, Truediv):
+    def __init__(self, val):
+        Add.__init__(self, val)
+        Sub.__init__(self, val)
+        Mul.__init__(self, val)
+        Truediv.__init__(self, val)
 
-sd = Add()
-print(sd.__add__())
 
-se = Sub()
-print(se.__sub__())
+num1 = Col(34)
+num2 = Col(56)
 
-ji = Mul()
-print(ji.__mul__())
-
-ko = Truediv()
-print(ko.__truediv__())
+print(num1 + num2)
+print(num1 - num2)
+print(num1 * num2)
+print(num1 / num2)
