@@ -1,11 +1,11 @@
 import turtle
 
 tt = turtle.Turtle()
-turtle.bgcolor("black")
+turtle.bgcolor("gold")
 tt.pencolor("red")
 tt.speed(0)
 tt.penup()
-tt.goto(1, 200)
+tt.goto(1, 250)
 tt.pendown()
 
 forDis = 0
@@ -17,7 +17,7 @@ while (True):
     forDis += 3
 
     dR += 1
-    if dR == 210:
+    if dR == 250:
         break
 
     tt.hideturtle()
